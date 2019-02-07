@@ -1,15 +1,13 @@
 // Widescreens
-@include mediaXl {
-        
+@include mediaXlarge {
 }
 
 // Desktops & Laptops
-@include mediaLg {
-        
+@include mediaLarge {
 }
 
 // Tablets
-@include mediaMd {
+@include mediaMedium {
         main {
                 align-items: center;
                 text-align: center;
@@ -52,12 +50,11 @@
                 'job2'
                 'job3';
                 grid-template-columns: 1fr;
-
         }
 }
 
 // Phones
-@include mediaSm {
+@include mediaSmall {
        main { 
                margin-top: 1vh;
        }

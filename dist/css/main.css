@@ -277,7 +277,7 @@ main {
   height: 60px;
   font-size: 16px; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-with: 768px) {
   main {
     align-items: center;
     text-align: center; }
@@ -312,6 +312,6 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-with: 560px) {
   main {
     margin-top: 1vh; } }

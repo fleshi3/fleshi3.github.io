@@ -79,26 +79,26 @@ code {
 }
 
 //Smart Phones
-@mixin mediaSm {
-        @media screen and (max-with: 560px) {
+@mixin mediaSmall {
+        @media screen and (max-width: 500px) {
                 @content;
         }
 }
 //Tablets
-@mixin mediaMd {
-        @media screen and (max-with: 768px) {
+@mixin mediaMedium {
+        @media screen and (max-width: 768px) {
                 @content;
         }
 }
 //Laptops
-@mixin mediaLg {
-        @media screen and (min-with: 769px) and (max-width: 1170px) {
+@mixin mediaLarge {
+        @media screen and (min-width: 769px) and (max-width: 1170px) {
                 @content;
         }
 }
 //Desktops
-@mixin mediaXl {
-        @media screen and (min-with: 1171px) {
+@mixin mediaXlarge {
+        @media screen and (min-width: 1171px) {
                 @content;
         }
 }
