@@ -149,6 +149,45 @@ code {
 .nav-tem:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (max-with: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url(../img/portrait.jpg);
+      background-size: 150px;
+      width: 150px;
+      height: 150px;
+      -moz-animation: heartBeat 2s infinite;
+      -webkit-animation: bounce 2s infinite;
+      animation: heartBeat 2s infinite; }
+  .about-info {
+    margin-top: 0vh;
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-with: 560px) {
+  main {
+    margin-top: 1vh; } }
+
 * {
   box-sizing: border-box;
   transition: all 1.5s ease-out; }

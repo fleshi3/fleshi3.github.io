@@ -4,7 +4,7 @@
   "description": "Responsive Portfolio Website",
   "main": "main.js",
   "scripts": {
-          "sass": "node-sass -w scss/ -o dist/css --recursive"
+    "sass": "node-sass -w scss/ -o css --recursive"
   },
   "author": "Mark Navarro",
   "license": "ISC",
