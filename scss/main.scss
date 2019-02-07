@@ -1,0 +1,148 @@
+@import 'config';
+@import 'menu';
+
+* {
+  box-sizing: border-box;
+  @include easeOut();
+}
+
+body {
+  @include background;
+  opacity: 0;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  background: $primary-color;
+  color: $primary-fg;
+  height: 100%;
+  margin: 0;
+  font-family: Hack;
+  line-break: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 4rem;
+    text-align: left;
+    animation: heartBeat 2s infinite alternate;
+    transform-origin: center;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 0rem;
+    text-align: left;
+    background: rgba(lighten($primary-color, 2), 0.7);
+  }
+}
+
+a {
+  color: $primary-fg;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  .icons {
+    margin-top: 1rem;
+    text-align: left;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+  .bounce {
+    @include bounce();
+    margin-top: 3rem;
+    text-align: center;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+
+// About Page
+
+.about-info {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas: 
+        'bioimage bio bio'
+        'job1 job2 job3';
+        grid-template-columns: repeat(3,1fr);
+}
+
+.bio-image {
+        grid-area: bioimage;
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+}
+
+.bio {
+        grid-area: bio;
+}
+
+.job-1 {
+        grid-area: job1;
+}
+.job-2 {
+        grid-area: job2;
+}
+.job-3 {
+        grid-area: job3;
+}
+
+.job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+}
+
+.job h3 {
+        color: $secondary-color;
+}
+
+#main-footer {
+        text-align: center;
+        padding: 1rem;
+        background: darken($primary-color, 5);
+        color: $secondary-color;
+        height: 60px;
+        font-size: 16px;
+}
+
+@import 'mobile';
