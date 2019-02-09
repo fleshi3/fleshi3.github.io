@@ -153,6 +153,28 @@ main {
         }
 }
 
+// Contact
+.boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: left;
+        margin-top: 1rem;
+        div {
+                font-size: 2rem;
+                border: 3px $secondary-color solid;
+                padding: 0.5rem 1rem;
+                margin-bottom: 2rem;
+                @include easeOut;
+                &:hover {
+                        padding: 0.5rem 4rem;
+                        background: darken($primary-color, 7);
+
+                }
+        }
+}
+
+
 // Button Styles
 .btn {
        display: block;

@@ -281,6 +281,22 @@ main {
       border-color: #b8bb26;
       transition: all 1.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: left;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #b8bb26 solid;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+    transition: all 1.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 4rem;
+      background: #161616; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
