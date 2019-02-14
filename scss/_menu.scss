@@ -4,7 +4,7 @@
         position: absolute;
         z-index: 3;
         right: 35px;
-        top: 35px;
+        top: 28px;
         cursor: pointer;
         @include easeOut;
 
@@ -22,7 +22,7 @@
                 .btn-line {
                         // Line 1 - Rotate
                         &:nth-child(1) {
-                                transform: rotate(45deg) translate(5px, 5px);
+                                transform: rotate(45deg) translate(8px, 12px);
                         }
                         // Line 2 - Fade
                         &:nth-child(2) {
@@ -30,7 +30,7 @@
                         }
                         // Line 3 - Rotate
                         &:nth-child(3) {
-                                transform: rotate(-45deg) translate(7px, -6px);
+                                transform: rotate(-45deg) translate(0px, -2px);
                         }
                 }
         }
@@ -39,9 +39,9 @@
 // Menu Overlay
 .menu {
         position: fixed;
-        top: 0;
         width: 100%;
-        opacity: 0.9;
+        top: -110px;
+        opacity: 1;
         visibility: hidden;
 
         &.show {
@@ -49,22 +49,21 @@
                 
         }
 
-        &-branding, 
-        &-nav {
+        &-nav, 
+        &-branding {
               display: flex;
-              flex-flow: column wrap;
-              align-items: center;
-              justify-content: center;
-              float: left;
-              width: 50%;
-              height: 100vh;
+              flex-flow: row wrap;
+              align-items: left;
+              justify-content: left;
+              float: right;
+              width: 100%;
+              height: 9vh;
               overflow: hidden;
+              border-bottom: $secondary-color 3px solid;
         }
 
         &-nav {
-                margin: 0;
-                padding: 0;
-                background: darken($primary-color, 5);
+                background: $primary-color;
                 list-style: none;
                 transform: translate3d(0, -100%, 0);
                 @include easeOut;
@@ -76,17 +75,17 @@
         // Branding Slide
         &-branding {
                 background: $primary-color;
-                transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 0, 0);
                 @include easeOut;
                 &.show {
                         transform: translate3d(0,0,0);
                 }
                 .portrait {
-                        width: 250px;
-                        height: 250px;
+                        width: 50px;
+                        height: 50px;
                         background: url('../img/portrait.jpg');
-                        background-size: 250px;
-                        border-radius: 50%;
+                        background-size: 50px;
+                        border-radius: 20%;
                         border: solid 3px $secondary-color;
                         animation: bounce 2s infinite alternate;
                         transform-origin: center;
@@ -94,7 +93,7 @@
         }
         
         .nav-item {
-                transform: translate3d(600px, 0, 0);
+                transform: translate3d(0, -100%, 0);
                 @include easeOut;
                 &.show {
                         transform: translate3d(0,0,0);
@@ -106,13 +105,14 @@
 
         .nav-link {
                 display: inline-block;
+                margin-top: 1rem;
                 position: relative;
-                font-size: 30px;
-                text-transform: uppercase;
-                padding: 1rem 0;
+                font-size: 1.5rem;
+                //text-transform: uppercase;
+                padding: 1rem 1.5rem;
                 font-weight: 300;
                 color: #fff;
-                text-decoration: none;
+                //text-decoration: none;
                 @include easeOut;
                 &:hover {
                         color: $secondary-color;

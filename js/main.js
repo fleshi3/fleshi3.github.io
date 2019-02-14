@@ -27,3 +27,6 @@ function toggleMenu() {
                 showMenu = false;
         }
 }
+
+// Set Menu Status on Navigation
+

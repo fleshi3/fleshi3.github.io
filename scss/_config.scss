@@ -1,13 +1,14 @@
-$primary-color: #282828;
-$secondary-color: #b8bb26;
-$primary-fg: #ebdbb2;
+$primary-color: #0A0E14;
+//$primary-color: #1F2430;
+$secondary-color: #E6B450;
+$primary-fg: #fff;
 $show-home-image: true;
-$home-image: url(/img/background.jpg);
+$home-image: url(/img/bg.jpg);
 $background-opacity: 0.85;
 
 pre,
 code {
-  font-family: Hack, monospace;
+  font-family: 'Roboto Slab', serif;
 }
 
 @mixin bounce {
@@ -55,7 +56,7 @@ code {
 }
 
 @mixin easeOut {
-  transition: all 1.5s ease-out;
+  transition: all 1s ease-out;
 }
 
 @mixin background {
@@ -66,7 +67,7 @@ code {
       background-size: cover;
       &:after {
         content: '';
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         width: 100%;
