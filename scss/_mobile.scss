@@ -20,33 +20,23 @@
                 .lg-heading {
                         line-height: 1;
                         margin-bottom: 1rem;
+                        //font-size: 2.5rem;
                 }
         }
-        ul.menu-nav,
-        div.menu-branding {
-                float: none;
+        ul.menu-nav {
+                //float: none;
                 width: 100%;
-                min-height: 0;
+                //min-height: 0;
                 &.show {
                         transform: translate3d(0,0,0);
                 }
         }
         .menu-nav {
-                height: 75vh;
-                transform: translate3d(-100%,0,0);
-                font-size: 24px;
+                //height: 5rem;
+                transform: translate3d(0,-100%,0);
+                //font-size: 10px;
         }
-        .menu-branding {
-                height: 25vh;
-                transform: translate3d(100%,0,0);
-                .portrait {
-                        background: url(../img/portrait.jpg);
-                        background-size: 150px;
-                        width: 150px;
-                        height: 150px;
-                        @include beat;
-                }
-        }
+        
         .about-info {
                 margin-top: 0vh;
                 grid-template-areas:
@@ -66,9 +56,91 @@
 // Phones
 @include mediaSmall {
        main { 
-               margin-top: 1vh;
+               padding: 2rem 1rem;
+               .lg-heading {
+                       font-size: 2.5rem;
+               }
+               .sm-heading {
+                       font-size: 1rem;
+               }
        }
        .projects {
                grid-template-columns: 1fr;
+       }
+       .menu {
+               width: 80%;
+               right:0;
+               &-nav {
+                       display: flex;
+                       flex-flow: column nowrap;
+                       justify-content: start;
+                       padding: 0 0;
+                       height: 100vh;
+                       border-right: none;
+                       border-bottom: none;
+                       transform: translate3d(100%, 0, 0);
+                       background: lighten($primary-color, 7);
+                       &.show {
+                               transform: translate3d(0, 0, 0);
+                       }
+               }
+               .nav-link {
+                       font-size: 1rem;
+                       text-align: left;
+                       font-weight: 600;
+                       padding: 0.5rem 4.5rem ;
+                       padding-bottom: 1rem;
+               }
+               .nav-item {
+                       padding-left: 2.5rem;
+                       color: lighten($primary-color, 20); 
+                       &.current {
+                               border-left: $secondary-color 3px solid;
+                               background: lighten($primary-color,4);
+                               .fas {
+                                        color: $secondary-color;
+                               }
+                       }
+                       transform: translate3d(100%, 0, 0);
+                       @include easeOut;
+                       &.show {
+                               transform: translate3d(0,0,0);
+                       }
+                       &:hover {
+                               background: lighten($primary-color, 4);
+                               padding-left: 15px;
+                               .fas {
+                                       color: $secondary-color;
+                               }
+                       }
+                       &:nth-child(3) {
+                       }
+               }
+               .branding {
+                       background: lighten($primary-color, 2);
+                       display: flex;
+                       flex-flow: column wrap;
+                       padding-top: 4rem;
+                       padding-bottom: 2rem;
+                       padding-left: 1rem;
+                       img {
+                               height: 140px;
+                               border: lighten($primary-color,10) 2px solid;
+                               border-radius: 50%;
+                               transform: translate3d(55%,0,0);
+                       }
+                       .information {
+                               font-size: 13px;
+                               text-align: center;
+                               padding-left: 4rem;
+                               transform: translate3d(-11%,0,0);
+                               color: $secondary-color;
+                               h3 {
+                                       color: white;
+                                       font-size: 1.6rem;
+                               }
+                               
+                       }
+               }
        }
 }

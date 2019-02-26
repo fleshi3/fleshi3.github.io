@@ -7,6 +7,22 @@
   @include easeOut();
 }
 
+.mobileShow {
+        display:none;
+}
+@media only screen
+        and (min-device-width:320px) 
+        and (max-device-width:480px) {
+                .mobileShow {
+                        display: inline;
+                }
+        }
+
+
+.fas {
+        font-size: 1rem;
+}
+
 body {
   @include background;
   opacity: 0.85;
@@ -50,6 +66,7 @@ a {
 
 header {
   position: fixed;
+  top: 0;
   z-index: 2;
   width: 100%;
 }
@@ -102,6 +119,7 @@ main {
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-bottom: 4rem;
 }
 
 .bio-image {
@@ -127,7 +145,7 @@ main {
   grid-column: 3;
   grid-row: 1;
   ul {
-    list-style: none;
+    list-style: square;
     align-items: left;
     text-decoration: none;
   }
@@ -135,12 +153,21 @@ main {
 .job3 {
   grid-column: 3;
   grid-row: 2;
+  ul {
+          list-style: square;
+          align-items: left;
+          text-decoration: none;
+  }
 }
 
 .job {
   background: rgba($primary-color, 0.4);
   padding: 0.5rem;
+  border-bottom: rgba($primary-color, 0) 3px solid;
+  &:hover {
   border-bottom: $secondary-color 3px solid;
+  @include easeOut;
+  }
 }
 
 .job h3 {
@@ -200,19 +227,19 @@ main {
 // Contact
 .boxes {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column nowrap;
   justify-content: space-evenly;
-  align-items: left;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  padding: 0 0rem;
   div {
     font-size: 2rem;
     border: 3px $secondary-color solid;
     padding: 0.5rem 1rem;
     margin-bottom: 2rem;
+    background: rgba($primary-color, 0.4);
     @include easeOut;
     &:hover {
-      padding: 0.5rem 4rem;
-      background: darken($primary-color, 7);
+            background: rgba($primary-color, 1)
     }
   }
 }
