@@ -28,14 +28,24 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  z-index: 0;
+  background-attachment: fixed;
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba($primary-color, $background-opacity);
+  }
 }
 
 body {
-  //@include background;
-  opacity: 0.85;
+  opacity: 1;
   transition: opacity 2s;
   -webkit-transition: opacity 2s;
-  background: $primary-color;
   color: $primary-fg;
   height: 100%;
   margin: 0;

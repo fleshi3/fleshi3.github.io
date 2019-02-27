@@ -1,160 +1,181 @@
 // Widescreens
 @include mediaXlarge {
-        .projects {
-                grid-template-columns: repeat(4, 1fr);
-        }
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktops & Laptops
 @include mediaLarge {
-        .projects {
-                grid-template-columns: repeat(3, 1fr);
-        }
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablets
 @include mediaMedium {
-        main {
-                align-items: center;
-                text-align: center;
-                .lg-heading {
-                        line-height: 1;
-                        margin-bottom: 1rem;
-                        //font-size: 2.5rem;
-                }
-        }
-        ul.menu-nav {
-                //float: none;
-                width: 100%;
-                //min-height: 0;
-                &.show {
-                        transform: translate3d(0,0,0);
-                }
-        }
-        .menu-nav {
-                //height: 5rem;
-                transform: translate3d(0,-100%,0);
-                //font-size: 10px;
-        }
-        
-        .about-info {
-                margin-top: 0vh;
-                grid-template-areas:
-                'bioimage'
-                'bio'
-                'job1'
-                'job2'
-                'job3';
-                grid-template-columns: 1fr;
-        }
-        .projects {
-                grid-template-columns: repeat(2, 1fr);
-        }
-}
+  main {
+    align-items: center;
+    text-align: center;
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      //font-size: 2.5rem;
+    }
+  }
+  ul.menu-nav {
+    //float: none;
+    width: 100%;
+    //min-height: 0;
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .menu-nav {
+    //height: 5rem;
+    transform: translate3d(0, -100%, 0);
+    //font-size: 10px;
+  }
 
+  .about-info {
+    margin-top: 0vh;
+    grid-template-areas:
+      'bioimage'
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 // Phones
 @include mediaSmall {
-       main { 
-               padding: 2rem 1rem;
-               .lg-heading {
-                       font-size: 2.5rem;
-               }
-               .sm-heading {
-                       font-size: 1rem;
-               }
-       }
-       .menu {
-               width: 80%;
-               right:0;
-               &-nav {
-                       display: flex;
-                       flex-flow: column nowrap;
-                       justify-content: start;
-                       padding: 0 0;
-                       height: 100vh;
-                       border-right: none;
-                       border-bottom: none;
-                       transform: translate3d(100%, 0, 0);
-                       background: lighten($primary-color, 7);
-                       &.show {
-                               transform: translate3d(0, 0, 0);
-                       }
-               }
-               .nav-link {
-                       font-size: 1rem;
-                       text-align: left;
-                       font-weight: 600;
-                       padding: 0.5rem 4.5rem ;
-                       padding-bottom: 1rem;
-               }
-               .nav-item {
-                       padding-left: 2.5rem;
-                       color: lighten($primary-color, 20); 
-                       &.current {
-                               border-left: $secondary-color 3px solid;
-                               background: lighten($primary-color,4);
-                               .fas {
-                                        color: $secondary-color;
-                               }
-                       }
-                       transform: translate3d(100%, 0, 0);
-                       @include easeOut;
-                       &.show {
-                               transform: translate3d(0,0,0);
-                       }
-                       &:hover {
-                               background: lighten($primary-color, 4);
-                               padding-left: 15px;
-                               .fas {
-                                       color: $secondary-color;
-                               }
-                       }
-                       &:nth-child(3) {
-                       }
-               }
-               .branding {
-                       background: lighten($primary-color, 2);
-                       display: flex;
-                       flex-flow: column wrap;
-                       padding-top: 4rem;
-                       padding-bottom: 2rem;
-                       padding-left: 1rem;
-                       img {
-                               height: 140px;
-                               border: lighten($primary-color,10) 2px solid;
-                               border-radius: 50%;
-                               transform: translate3d(55%,0,0);
-                       }
-                       .information {
-                               font-size: 13px;
-                               text-align: center;
-                               padding-left: 4rem;
-                               transform: translate3d(-11%,0,0);
-                               color: $secondary-color;
-                               h3 {
-                                       color: white;
-                                       font-size: 1.6rem;
-                               }
-                               
-                       }
-               }
-       }
-       .about-info {
-               display: flex;
-               flex-flow: column nowrap;
-               grid-gap: 15;
-       }
-       #showcase {
-               .projects {
-                       display: flex;
-                       flex-flow: column nowrap;
-               }
-       }
-       .boxes {
-               div {
-                       font-size: 1rem;
-               }
-       }
-
+  main {
+    padding: 2rem 1rem;
+    .lg-heading {
+      font-size: 2.5rem;
+    }
+    .sm-heading {
+      font-size: 1rem;
+    }
+  }
+  .menu {
+    width: 320px;
+    right: 0;
+    opacity: 1;
+    &-nav {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: start;
+      padding: 0 0;
+      height: 100vh;
+      border-right: none;
+      border-bottom: none;
+      transform: translate3d(100%, 0, 0);
+      background: lighten($primary-color, 7);
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    .nav-link {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.5rem 0rem;
+      padding-bottom: 1rem;
+    }
+    .nav-item {
+      padding-left: 0rem;
+      text-align: center;
+      color: lighten($primary-color, 20);
+      border-bottom: lighten($primary-color, 20) 1px solid;
+      &.current {
+        border-left: $secondary-color 3px solid;
+        left: -3px;
+        background: lighten($primary-color, 4);
+        .fas {
+          color: $secondary-color;
+        }
+      }
+      &:hover {
+        color: $secondary-color;
+      }
+      //transition
+      transform: translate3d(100%, 0, 0);
+      @include easeOut;
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+      //pixel alignment
+      .fas {
+        position: fixed;
+        left: 55px;
+        top: 1rem;
+      }
+      &:nth-child(2) {
+        .nav-link {
+          left: -9px;
+        }
+      }
+      &:nth-child(3) {
+        .fas {
+          left: 59px;
+        }
+      }
+      &:nth-child(4) {
+        background: lighten($primary-color, 4);
+        .fas {
+          left: 56px;
+        }
+      }
+      &:nth-child(5) {
+        .fas {
+          left: 57px;
+        }
+      }
+    }
+    .branding {
+      background: lighten($primary-color, 2);
+      display: flex;
+      flex-flow: column nowrap;
+      .portrait-container {
+        padding: 0 29%;
+        padding-top: 2rem;
+        img {
+          height: 140px;
+          border: lighten($primary-color, 10) 2px solid;
+          border-radius: 50%;
+        }
+      }
+      .information {
+        font-size: 13px;
+        text-align: center;
+        padding: 1rem 10%;
+        color: $secondary-color;
+        h3 {
+          color: white;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  .about-info {
+    display: flex;
+    flex-flow: column nowrap;
+    grid-gap: 15;
+  }
+  #showcase {
+    .projects {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  }
+  .boxes {
+    div {
+      font-size: 1rem;
+    }
+  }
 }
