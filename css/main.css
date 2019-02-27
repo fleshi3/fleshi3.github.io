@@ -178,7 +178,9 @@ body {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover; }
+    -o-background-size: cover;
+    text-align: center;
+    height: 100%; }
     body#bg-img:after {
       content: '';
       position: fixed;
