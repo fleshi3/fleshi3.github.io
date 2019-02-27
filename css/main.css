@@ -167,9 +167,7 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  z-index: 0;
-  background-attachment: fixed; }
+  background-size: cover; }
   html:after {
     content: '';
     position: fixed;
@@ -181,12 +179,10 @@ html {
     background: rgba(10, 14, 20, 0.85); }
 
 body {
-  opacity: 1;
   transition: opacity 2s;
   -webkit-transition: opacity 2s;
   color: #fff;
   height: 100%;
-  margin: 0;
   line-break: 1.5; }
 
 h1,
@@ -244,10 +240,8 @@ main {
       padding: 0.4rem; }
       main .bounce a:hover {
         color: #e6b450; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 10vh; }
+  main#home h1 {
+    margin-top: 10vh; }
 
 .about-info {
   display: grid;
@@ -318,7 +312,7 @@ main {
       width: 100%;
       height: auto;
       opacity: 1;
-      border: 0px #0a0e14 solid; }
+      border: 1px white solid; }
       #showcase .projects img:hover {
         opacity: 1;
         border-color: #e6b450;
@@ -379,6 +373,7 @@ main {
     color: #e6b450; }
 
 #main-footer {
+  display: none;
   text-align: center;
   padding-top: 0.7rem;
   background: #0a0e14;
@@ -469,12 +464,12 @@ main {
         top: 1rem; }
       .menu .nav-item:nth-child(2) .nav-link {
         left: -9px; }
+      .menu .nav-item:nth-child(2) .fas {
+        left: 58px; }
       .menu .nav-item:nth-child(3) .fas {
         left: 59px; }
-      .menu .nav-item:nth-child(4) {
-        background: #111822; }
-        .menu .nav-item:nth-child(4) .fas {
-          left: 56px; }
+      .menu .nav-item:nth-child(4) .fas {
+        left: 56px; }
       .menu .nav-item:nth-child(5) .fas {
         left: 57px; }
     .menu .branding {
@@ -496,12 +491,14 @@ main {
         .menu .branding .information h3 {
           color: white;
           font-size: 1.6rem; }
-  .about-info {
+  #home .about-info {
     display: flex;
-    flex-flow: column nowrap;
-    grid-gap: 15; }
+    flex-flow: column;
+    flex-wrap: nowrap; }
   #showcase .projects {
     display: flex;
     flex-flow: column nowrap; }
+    #showcase .projects .item {
+      padding-bottom: 2rem; }
   .boxes div {
     font-size: 1rem; } }

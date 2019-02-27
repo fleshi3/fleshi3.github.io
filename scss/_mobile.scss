@@ -119,6 +119,9 @@
         .nav-link {
           left: -9px;
         }
+        .fas {
+          left: 58px;
+        }
       }
       &:nth-child(3) {
         .fas {
@@ -126,7 +129,6 @@
         }
       }
       &:nth-child(4) {
-        background: lighten($primary-color, 4);
         .fas {
           left: 56px;
         }
@@ -162,15 +164,20 @@
       }
     }
   }
-  .about-info {
-    display: flex;
-    flex-flow: column nowrap;
-    grid-gap: 15;
+  #home {
+    .about-info {
+      display: flex;
+      flex-flow: column;
+      flex-wrap: nowrap;
+    }
   }
   #showcase {
     .projects {
       display: flex;
       flex-flow: column nowrap;
+      .item {
+                padding-bottom: 2rem;
+      }
     }
   }
   .boxes {
