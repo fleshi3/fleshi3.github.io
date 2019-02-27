@@ -204,7 +204,7 @@ h3 {
     margin-top: 0.5rem;
     font-size: 1.5rem;
     text-align: left;
-    padding-left: 2rem; }
+    padding: 0 2rem; }
 
 a {
   color: #fff;
@@ -250,7 +250,7 @@ main {
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-bottom: 4rem; }
+  padding-bottom: 2rem; }
 
 .bio-image {
   grid-column: 1;
@@ -273,17 +273,21 @@ main {
   grid-column: 3;
   grid-row: 1; }
   .job2 ul {
-    list-style: square;
-    align-items: left;
+    list-style: none;
+    text-align: center;
     text-decoration: none; }
+    .job2 ul li {
+      transform: translate(-8%, 0); }
 
 .job3 {
   grid-column: 3;
   grid-row: 2; }
   .job3 ul {
-    list-style: square;
-    align-items: left;
+    list-style: none;
+    text-align: center;
     text-decoration: none; }
+    .job3 ul li {
+      transform: translate(-8%, 0); }
 
 .job {
   background: rgba(10, 14, 20, 0.4);
@@ -292,6 +296,8 @@ main {
   .job:hover {
     border-bottom: #e6b450 3px solid;
     transition: all 1s ease-out; }
+  .job h3 {
+    text-align: center; }
 
 .job h3 {
   color: #e6b450;
@@ -500,5 +506,7 @@ main {
     flex-flow: column nowrap; }
     #showcase .projects .item {
       padding-bottom: 2rem; }
-  .boxes div {
-    font-size: 1rem; } }
+  .boxes {
+    padding: 0 2rem; }
+    .boxes div {
+      font-size: 1rem; } }

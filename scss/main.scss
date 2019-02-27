@@ -67,7 +67,7 @@ h3 {
     margin-top: 0.5rem;
     font-size: 1.5rem;
     text-align: left;
-    padding-left: 2rem;
+    padding: 0 2rem;
     //background: rgba(lighten($primary-color, 4), 0.7);
   }
 }
@@ -132,7 +132,7 @@ main {
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .bio-image {
@@ -158,18 +158,24 @@ main {
   grid-column: 3;
   grid-row: 1;
   ul {
-    list-style: square;
-    align-items: left;
+    list-style: none;
+    text-align: center;
     text-decoration: none;
+    li {
+        transform: translate(-8%, 0);
+    }
   }
 }
 .job3 {
   grid-column: 3;
   grid-row: 2;
   ul {
-    list-style: square;
-    align-items: left;
+    list-style: none;
+    text-align: center;
     text-decoration: none;
+    li {
+        transform: translate(-8%, 0);
+    }
   }
 }
 
@@ -180,6 +186,9 @@ main {
   &:hover {
     border-bottom: $secondary-color 3px solid;
     @include easeOut;
+  }
+  h3 {
+        text-align: center;
   }
 }
 
