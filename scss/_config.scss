@@ -62,6 +62,12 @@ code {
 @mixin background {
   @if $show-home-image {
     &#bg-img {
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
       background: $home-image;
       background-repeat: no-repeat;
       background-position: center center;
@@ -70,8 +76,6 @@ code {
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-      text-align: center;
-      height: 100%;
       &:after {
         content: '';
         position: fixed;
