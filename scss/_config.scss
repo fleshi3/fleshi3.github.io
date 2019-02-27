@@ -62,16 +62,18 @@ code {
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background-image: $home-image;
+      background: $home-image;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      background-attachment: fixed;
+      position: fixed;
+      z-index: 0;
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
+      background-attachment: fixed;
       &:after {
         content: '';
         position: fixed;
