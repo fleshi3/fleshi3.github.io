@@ -62,7 +62,7 @@ code {
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-            background: $home-image;
+            background-image: $home-image;
       display: block;
       position: fixed;
       left: 0;
