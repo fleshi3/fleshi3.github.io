@@ -62,13 +62,13 @@ code {
 @mixin background {
   @if $show-home-image {
     &#bg-img {
+            background: $home-image;
       display: block;
       position: fixed;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      background: $home-image;
       background-repeat: no-repeat;
       background-position: center center;
       background-attachment: fixed;
