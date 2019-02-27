@@ -63,6 +63,8 @@ code {
   @if $show-home-image {
     &#bg-img {
       background: $home-image;
+      background-repeat: no-repeat;
+      background-position: center center;
       background-attachment: fixed;
       background-size: cover;
       &:after {
