@@ -1,6 +1,6 @@
-$primary-color: #0A0E14;
+$primary-color: #0a0e14;
 //$primary-color: #1F2430;
-$secondary-color: #E6B450;
+$secondary-color: #e6b450;
 $primary-fg: #fff;
 $show-home-image: true;
 $home-image: url(/img/bg.jpg);
@@ -62,15 +62,11 @@ code {
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-            background-image: $home-image;
-      display: block;
-      position: fixed;
+      background-image: $home-image;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
       background-attachment: fixed;
       background-size: cover;
       -webkit-background-size: cover;
@@ -92,25 +88,25 @@ code {
 
 //Smart Phones
 @mixin mediaSmall {
-        @media screen and (max-width: 500px) {
-                @content;
-        }
+  @media screen and (max-width: 500px) {
+    @content;
+  }
 }
 //Tablets
 @mixin mediaMedium {
-        @media screen and (max-width: 768px) {
-                @content;
-        }
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
 //Laptops
 @mixin mediaLarge {
-        @media screen and (min-width: 769px) and (max-width: 1170px) {
-                @content;
-        }
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
 }
 //Desktops
 @mixin mediaXlarge {
-        @media screen and (min-width: 1171px) {
-                @content;
-        }
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
 }
