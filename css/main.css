@@ -161,6 +161,14 @@ code {
 .fas {
   font-size: 1rem; }
 
+html {
+  height: 100%;
+  background: url(/img/bg2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 body {
   opacity: 0.85;
   transition: opacity 2s;
@@ -170,27 +178,6 @@ body {
   height: 100%;
   margin: 0;
   line-break: 1.5; }
-  body#bg-img {
-    background: url(/img/bg2.jpg);
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-attachment: fixed; }
-    body#bg-img:after {
-      content: '';
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba(10, 14, 20, 0.85); }
 
 h1,
 h2,

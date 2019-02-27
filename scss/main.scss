@@ -8,23 +8,30 @@
 }
 
 .mobileShow {
-        display:none;
+  display: none;
 }
 
-@media only screen
-        and (max-device-width:500px) {
-                .mobileShow {
-                        display: inline;
-                }
-        }
-
+@media only screen and (max-device-width: 500px) {
+  .mobileShow {
+    display: inline;
+  }
+}
 
 .fas {
-        font-size: 1rem;
+  font-size: 1rem;
+}
+
+html {
+  height: 100%;
+  background: url(/img/bg2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
-  @include background;
+  //@include background;
   opacity: 0.85;
   transition: opacity 2s;
   -webkit-transition: opacity 2s;
@@ -154,9 +161,9 @@ main {
   grid-column: 3;
   grid-row: 2;
   ul {
-          list-style: square;
-          align-items: left;
-          text-decoration: none;
+    list-style: square;
+    align-items: left;
+    text-decoration: none;
   }
 }
 
@@ -165,8 +172,8 @@ main {
   padding: 0.5rem;
   border-bottom: rgba($primary-color, 0) 3px solid;
   &:hover {
-  border-bottom: $secondary-color 3px solid;
-  @include easeOut;
+    border-bottom: $secondary-color 3px solid;
+    @include easeOut;
   }
 }
 
@@ -239,7 +246,7 @@ main {
     background: rgba($primary-color, 0.4);
     @include easeOut;
     &:hover {
-            background: rgba($primary-color, 1)
+      background: rgba($primary-color, 1);
     }
   }
 }
@@ -252,14 +259,14 @@ main {
   border: 0;
   margin-bottom: 0rem;
   opacity: 0.85;
-  }
+}
 
 .btn-dark {
   @extend .btn;
   background: $primary-color;
   border-bottom: 3px $secondary-color solid;
   &:hover {
-          color: $secondary-color;
+    color: $secondary-color;
   }
 }
 
@@ -269,9 +276,9 @@ main {
   border-bottom: 1px lighten($primary-color, 5) solid;
   color: #fff;
   &:hover {
-          color: $secondary-color;
+    color: $secondary-color;
   }
-  }
+}
 
 #main-footer {
   text-align: center;
