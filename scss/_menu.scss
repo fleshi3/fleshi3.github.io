@@ -88,6 +88,7 @@
         }
         
         .nav-item {
+                padding-left: 2rem;
                 transform: translate3d(0, -100%, 0);
                 @include easeOut;
                 &.show {
@@ -95,6 +96,12 @@
                 }
                 &.current > a {
                         color: $secondary-color;
+                }
+                .fas {
+                padding-left: 2rem;
+                position: fixed;
+                top: 2rem;
+                left: -4px;
                 }
         }
 

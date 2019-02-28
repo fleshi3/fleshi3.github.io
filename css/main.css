@@ -116,12 +116,18 @@ code {
       animation: bounce 2s infinite alternate;
       transform-origin: center; }
   .menu .nav-item {
+    padding-left: 2rem;
     transform: translate3d(0, -100%, 0);
     transition: all 1s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
       color: #e6b450; }
+    .menu .nav-item .fas {
+      padding-left: 2rem;
+      position: fixed;
+      top: 2rem;
+      left: -4px; }
   .menu .nav-link {
     display: inline-block;
     margin-top: 6px;
@@ -245,12 +251,9 @@ main {
 
 .about-info {
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem; }
+  padding: 2rem 2rem; }
 
 .bio-image {
   grid-column: 1;
@@ -271,27 +274,18 @@ main {
 
 .job2 {
   grid-column: 3;
-  grid-row: 1; }
-  .job2 ul {
-    list-style: none;
-    text-align: center;
-    text-decoration: none; }
-    .job2 ul li {
-      transform: translate(-8%, 0); }
+  grid-row: 1;
+  text-align: center; }
 
 .job3 {
   grid-column: 3;
-  grid-row: 2; }
-  .job3 ul {
-    list-style: none;
-    text-align: center;
-    text-decoration: none; }
-    .job3 ul li {
-      transform: translate(-8%, 0); }
+  grid-row: 2;
+  text-align: center; }
 
 .job {
   background: rgba(10, 14, 20, 0.4);
-  padding: 0.5rem;
+  padding: 0 1rem;
+  padding-top: 0.5rem;
   border-bottom: rgba(10, 14, 20, 0) 3px solid; }
   .job:hover {
     border-bottom: #e6b450 3px solid;
@@ -312,16 +306,17 @@ main {
   #showcase .projects {
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 2rem; }
     #showcase .projects img {
       width: 100%;
       height: auto;
       opacity: 1;
-      border: 1px white solid; }
+      border: rgba(10, 14, 20, 0.7) 3px solid;
+      border-radius: 1%; }
       #showcase .projects img:hover {
         opacity: 1;
-        border-color: #e6b450;
+        border-color: rgab(#4e6d9c, 1);
         transition: all 1s ease-out; }
   #showcase .middle {
     transition: 0.5s ease;
@@ -346,10 +341,10 @@ main {
   flex-flow: column nowrap;
   justify-content: space-evenly;
   margin-top: 2rem;
-  padding: 0 0rem; }
+  padding: 0 2rem; }
   .boxes div {
     font-size: 2rem;
-    border: 3px #e6b450 solid;
+    border: 2px #e6b450 solid;
     padding: 0.5rem 1rem;
     margin-bottom: 2rem;
     background: rgba(10, 14, 20, 0.4);
@@ -416,7 +411,7 @@ main {
     margin-top: 0vh;
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
-  .projects {
+  #showcase .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
@@ -436,8 +431,6 @@ main {
       justify-content: start;
       padding: 0 0;
       height: 100vh;
-      border-right: none;
-      border-bottom: none;
       transform: translate3d(100%, 0, 0);
       background: #161f2c; }
       .menu-nav.show {
@@ -446,12 +439,15 @@ main {
       font-size: 1rem;
       font-weight: 600;
       padding: 0.5rem 0rem;
-      padding-bottom: 1rem; }
+      padding-bottom: 1rem;
+      color: #2c3e58; }
+      .menu .nav-link:hover {
+        color: #e6b450; }
     .menu .nav-item {
-      padding-left: 0rem;
+      padding-left: 0;
       text-align: center;
       color: #2c3e58;
-      border-bottom: #2c3e58 1px solid;
+      border-left: #2c3e58 3px solid;
       transform: translate3d(100%, 0, 0);
       transition: all 1s ease-out; }
       .menu .nav-item.current {
@@ -461,11 +457,13 @@ main {
         .menu .nav-item.current .fas {
           color: #e6b450; }
       .menu .nav-item:hover {
-        color: #e6b450; }
+        color: #e6b450;
+        border-color: #e6b450; }
       .menu .nav-item.show {
         transform: translate3d(0, 0, 0); }
       .menu .nav-item .fas {
         position: fixed;
+        padding-left: 0;
         left: 55px;
         top: 1rem; }
       .menu .nav-item:nth-child(2) .nav-link {
@@ -478,6 +476,8 @@ main {
         left: 56px; }
       .menu .nav-item:nth-child(5) .fas {
         left: 57px; }
+    .menu .nav-item:hover {
+      transform: translate3d(15%, 0, 0); }
     .menu .branding {
       background: #0d131b;
       display: flex;
@@ -492,7 +492,8 @@ main {
       .menu .branding .information {
         font-size: 13px;
         text-align: center;
-        padding: 1rem 10%;
+        padding: 0 10%;
+        padding-bottom: 1rem;
         color: #e6b450; }
         .menu .branding .information h3 {
           color: white;

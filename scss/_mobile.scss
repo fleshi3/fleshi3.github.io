@@ -47,8 +47,10 @@
       'job3';
     grid-template-columns: 1fr;
   }
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
+  #showcase {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -73,8 +75,6 @@
       justify-content: start;
       padding: 0 0;
       height: 100vh;
-      border-right: none;
-      border-bottom: none;
       transform: translate3d(100%, 0, 0);
       background: lighten($primary-color, 7);
       &.show {
@@ -86,12 +86,17 @@
       font-weight: 600;
       padding: 0.5rem 0rem;
       padding-bottom: 1rem;
+      color: lighten($primary-color, 20);
+      &:hover {
+              color: $secondary-color;
+      }
     }
     .nav-item {
-      padding-left: 0rem;
+      padding-left: 0;
       text-align: center;
       color: lighten($primary-color, 20);
-      border-bottom: lighten($primary-color, 20) 1px solid;
+      //border-bottom: lighten($primary-color, 20) 1px solid;
+      border-left: lighten($primary-color, 20) 3px solid;
       &.current {
         border-left: $secondary-color 3px solid;
         left: -3px;
@@ -102,6 +107,7 @@
       }
       &:hover {
         color: $secondary-color;
+        border-color: $secondary-color;
       }
       //transition
       transform: translate3d(100%, 0, 0);
@@ -112,6 +118,7 @@
       //pixel alignment
       .fas {
         position: fixed;
+        padding-left: 0;
         left: 55px;
         top: 1rem;
       }
@@ -139,6 +146,13 @@
         }
       }
     }
+    .nav-item {
+            &:hover {
+                    transform: translate3d(15%,0,0);
+            }
+    }
+
+
     .branding {
       background: lighten($primary-color, 2);
       display: flex;
@@ -155,7 +169,8 @@
       .information {
         font-size: 13px;
         text-align: center;
-        padding: 1rem 10%;
+        padding: 0 10%;
+        padding-bottom: 1rem;
         color: $secondary-color;
         h3 {
           color: white;
@@ -176,7 +191,7 @@
       display: flex;
       flex-flow: column nowrap;
       .item {
-                padding-bottom: 2rem;
+        padding-bottom: 2rem;
       }
     }
   }
