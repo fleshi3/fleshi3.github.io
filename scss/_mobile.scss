@@ -182,8 +182,7 @@
     .about-info {
       display: flex;
       flex-flow: column;
-      flex-column-gaps: 10;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
     .job {
     }
