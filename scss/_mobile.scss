@@ -187,16 +187,17 @@
     .job {
     }
   }
-}
-#showcase {
-  .projects {
-    display: flex;
-    flex-flow: column nowrap;
-    .item {
-      padding-bottom: 2rem;
-    }
+  #showcase {
+          .projects {
+                  display: flex;
+                  flex-flow: column nowrap;
+                  .item {
+                          padding-bottom: 2rem;
+                  }
+          }
   }
 }
+
 .boxes {
   padding: 0 2rem;
   div {

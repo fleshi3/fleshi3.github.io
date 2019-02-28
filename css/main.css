@@ -392,7 +392,7 @@ main {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-witdth: 501px) and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center; }
@@ -499,13 +499,12 @@ main {
   #home .about-info {
     display: flex;
     flex-flow: column;
-    flex-wrap: wrap; } }
-
-#showcase .projects {
-  display: flex;
-  flex-flow: column nowrap; }
-  #showcase .projects .item {
-    padding-bottom: 2rem; }
+    flex-wrap: wrap; }
+  #showcase .projects {
+    display: flex;
+    flex-flow: column nowrap; }
+    #showcase .projects .item {
+      padding-bottom: 2rem; } }
 
 .boxes {
   padding: 0 2rem; }
