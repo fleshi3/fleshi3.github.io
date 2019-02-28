@@ -374,16 +374,14 @@ main {
     color: #e6b450; }
 
 #main-footer {
-  display: none;
   text-align: center;
-  padding-top: 0.7rem;
-  background: #0a0e14;
-  border-top: #e6b450 3px solid;
-  color: #e6b450;
-  height: 3rem;
   width: 100%;
+  padding-top: 0.7rem;
+  background: #111822;
+  border-top: #161f2c 3px solid;
+  color: white;
+  height: 3rem;
   font-size: 16px;
-  position: fixed;
   bottom: 0; }
 
 @media screen and (min-width: 1171px) {
@@ -510,4 +508,24 @@ main {
   .boxes {
     padding: 0 2rem; }
     .boxes div {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+  #myBtn {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite; }
+    #myBtn:hover {
+      color: #e6b450; }
+    #myBtn .fas {
+      font-size: 2.5rem; } }

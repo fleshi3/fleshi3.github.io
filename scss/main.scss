@@ -281,17 +281,15 @@ main {
 }
 
 #main-footer {
-        display:none;
   text-align: center;
-  padding-top: 0.7rem;
-  background: $primary-color;
-  border-top: $secondary-color 3px solid;
-  color: $secondary-color;
-  height: 3rem;
   width: 100%;
+  padding-top: 0.7rem;
+  background: lighten($primary-color,4);
+  border-top: lighten($primary-color, 7) 3px solid;
+  color: white;
+  height: 3rem;
   font-size: 16px;
-  position: fixed;
-  bottom: 0
+  bottom: 0;
 }
 
 @import 'mobile';

@@ -201,4 +201,31 @@
       font-size: 1rem;
     }
   }
+
+  #myBtn {
+          display: block;
+          opacity: 0;
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          z-index: 99;
+          border: none;
+          outline: none;
+          background: none;
+          color: white;
+          cursor: pointer;
+          font-size: 2rem;
+          @include bounce;
+          &:hover {
+                color: $secondary-color;
+          }
+          .fas {
+                font-size: 2.5rem;
+          }
+  }
+
+
+
+
+  
 }
