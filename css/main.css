@@ -499,33 +499,37 @@ main {
   #home .about-info {
     display: flex;
     flex-flow: column;
-    flex-wrap: nowrap; }
-  #showcase .projects {
-    display: flex;
-    flex-flow: column nowrap; }
-    #showcase .projects .item {
-      padding-bottom: 2rem; }
-  .boxes {
-    padding: 0 2rem; }
-    .boxes div {
-      font-size: 1rem; }
-  #myBtn {
-    display: block;
-    opacity: 0;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background: none;
-    color: white;
-    cursor: pointer;
-    font-size: 2rem;
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite; }
-    #myBtn:hover {
-      color: #e6b450; }
-    #myBtn .fas {
-      font-size: 2.5rem; } }
+    flex-column-gaps: 10;
+    flex-wrap: nowrap; } }
+
+#showcase .projects {
+  display: flex;
+  flex-flow: column nowrap; }
+  #showcase .projects .item {
+    padding-bottom: 2rem; }
+
+.boxes {
+  padding: 0 2rem; }
+  .boxes div {
+    font-size: 1rem; }
+
+#myBtn {
+  display: block;
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite; }
+  #myBtn:hover {
+    color: #e6b450; }
+  #myBtn .fas {
+    font-size: 2.5rem; }

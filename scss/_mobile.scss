@@ -88,7 +88,7 @@
       padding-bottom: 1rem;
       color: lighten($primary-color, 20);
       &:hover {
-              color: $secondary-color;
+        color: $secondary-color;
       }
     }
     .nav-item {
@@ -147,11 +147,10 @@
       }
     }
     .nav-item {
-            &:hover {
-                    transform: translate3d(15%,0,0);
-            }
+      &:hover {
+        transform: translate3d(15%, 0, 0);
+      }
     }
-
 
     .branding {
       background: lighten($primary-color, 2);
@@ -183,49 +182,47 @@
     .about-info {
       display: flex;
       flex-flow: column;
+      flex-column-gaps: 10;
       flex-wrap: nowrap;
     }
-  }
-  #showcase {
-    .projects {
-      display: flex;
-      flex-flow: column nowrap;
-      .item {
-        padding-bottom: 2rem;
-      }
+    .job {
     }
   }
-  .boxes {
-    padding: 0 2rem;
-    div {
-      font-size: 1rem;
+}
+#showcase {
+  .projects {
+    display: flex;
+    flex-flow: column nowrap;
+    .item {
+      padding-bottom: 2rem;
     }
   }
-
-  #myBtn {
-          display: block;
-          opacity: 0;
-          position: fixed;
-          bottom: 0;
-          right: 0;
-          z-index: 99;
-          border: none;
-          outline: none;
-          background: none;
-          color: white;
-          cursor: pointer;
-          font-size: 2rem;
-          @include bounce;
-          &:hover {
-                color: $secondary-color;
-          }
-          .fas {
-                font-size: 2.5rem;
-          }
+}
+.boxes {
+  padding: 0 2rem;
+  div {
+    font-size: 1rem;
   }
+}
 
-
-
-
-  
+#myBtn {
+  display: block;
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  @include bounce;
+  &:hover {
+    color: $secondary-color;
+  }
+  .fas {
+    font-size: 2.5rem;
+  }
 }

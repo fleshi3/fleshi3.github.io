@@ -45,7 +45,6 @@ function scrollFunction() {
 
 // When the user clocks on the button, scroll to the top of the document
 function topFunction() {
-        //document.body.scrollTop = 0; //safari
-        window.scrollTo({ top: 0, behaviour: "slow" });
-//document.documentElement.scrollTop = 0; // chrome, firefox, IE, opera
+        document.body.scrollTop = 0; //safari
+        document.documentElement.scrollTop = 0; // chrome, firefox, IE, opera
 }
