@@ -17,6 +17,7 @@ function toggleMenu() {
     menuBrand.classList.add('show');
     navItem.forEach(item => item.classList.add('show'));
     showMenu = true;
+    document.getElementById('home').style.opacity = '0';
   } else {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
@@ -24,6 +25,7 @@ function toggleMenu() {
     menuBrand.classList.remove('show');
     navItem.forEach(item => item.classList.remove('show'));
     showMenu = false;
+    document.getElementById('home').style.opacity = '1';
   }
 }
 
@@ -45,6 +47,6 @@ function scrollFunction() {
 
 // When the user clocks on the button, scroll to the top of the document
 function topFunction() {
-        document.body.scrollTop = 0; //safari
-        document.documentElement.scrollTop = 0; // chrome, firefox, IE, opera
+  document.body.scrollTop = 0; //safari
+  document.documentElement.scrollTop = 0; // chrome, firefox, IE, opera
 }
