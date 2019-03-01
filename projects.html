@@ -32,7 +32,9 @@
         <ul class="menu-nav">
           <div class="mobileShow">
             <li class="branding">
-              <div class="portrait-container"><img src="img/portrait.jpg" alt="" /></div>
+              <div class="portrait-container">
+                <img src="img/portrait.jpg" alt="" />
+              </div>
               <div class="information">
                 <h3>Mark Navarro</h3>
                 <i class="fas fa-map-marker-alt"></i> Melbourne, AUS
@@ -56,6 +58,25 @@
             <a class="nav-link" href="/contact.html">Contact</a>
           </li>
         </ul>
+        <!-- Search -->
+        <div class="menu-search">
+          <!-- Form Markup -->
+          <form action="#" class="form-search">
+            <label for="keywords" class="hiddenSearch">Search</label>
+            <input
+              class="input input-search"
+              id="keywords"
+              name="keywords"
+              type="search"
+              placeholder="Find Something..."
+              autocorrect="off"
+              autocapitalize="off"
+              required
+            />
+            <button type="submit" class"button button-search">
+            <i class="fas fa-search"></i>
+          </form>
+        </div>
       </nav>
     </header>
 
@@ -144,9 +165,11 @@
       </div>
     </main>
   </body>
- <div class="mobileShow">
-            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
-    </div> 
+  <div class="mobileShow">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fas fa-angle-double-up"></i>
+    </button>
+  </div>
 
   <script src="js/main.js"></script>
 </html>
