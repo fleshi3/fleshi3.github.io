@@ -4,7 +4,6 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBrand = document.querySelector('.menu-branding');
 const navItem = document.querySelectorAll('.nav-item');
-const menuSearch = document.querySelector('.menu-search');
 
 // Set Initial State of Menu
 let showMenu = false;
@@ -17,7 +16,6 @@ function toggleMenu() {
     menuNav.classList.add('show');
     menuBrand.classList.add('show');
     navItem.forEach(item => item.classList.add('show'));
-    menuSearch.style.opacity = '1';
     showMenu = true;
     document.getElementById('home').style.opacity = '0';
   } else {
@@ -27,7 +25,6 @@ function toggleMenu() {
     menuBrand.classList.remove('show');
     navItem.forEach(item => item.classList.remove('show'));
     showMenu = false;
-    menuSearch.style.opacity = '0';
     document.getElementById('home').style.opacity = '1';
   }
 }
